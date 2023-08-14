@@ -16,6 +16,7 @@ def encrypt_file(infile, outfile, key):
         fout.write(encrypted_data)
     return end_time - start_time
 
+
 # Decrypt a file and measure time taken
 def decrypt_file(infile, outfile, key):
     f = Fernet(key)
@@ -27,6 +28,7 @@ def decrypt_file(infile, outfile, key):
     with open(outfile, "wb") as fout:
         fout.write(decrypted_data)
     return end_time - start_time
+
 
 # Encrypt and decrypt a file and measure time taken
 encryption_time = encrypt_file("btpsem6.txt", "encrypted.bin", key)

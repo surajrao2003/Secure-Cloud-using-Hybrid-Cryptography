@@ -27,27 +27,30 @@ hkdf = HKDF(
     algorithm=hashes.SHA256(),
     length=32,
     salt=None,
-    info=b'handshake data',
-    backend=backend
+    info=b"handshake data",
+    backend=backend,
 )
 key = hkdf.derive(shared_key)
 # Unique value for each encryption
 import os
+
 nonce = os.urandom(16)
 cipher = Cipher(algorithms.AES(key), modes.CTR(nonce), backend=backend)
 encryptor = cipher.encryptor()
 ciphertext = encryptor.update(message) + encryptor.finalize()
 
-encrypted = ephemeral_public_key.public_bytes(
-    encoding=serialization.Encoding.DER,
-    format=serialization.PublicFormat.SubjectPublicKeyInfo
-) + ciphertext
+encrypted = (
+    ephemeral_public_key.public_bytes(
+        encoding=serialization.Encoding.DER,
+        format=serialization.PublicFormat.SubjectPublicKeyInfo,
+    )
+    + ciphertext
+)
 
 # User 2 decrypts the message using their private key
 ephemeral_public_key_bytes, ciphertext = encrypted[:91], encrypted[91:]
 ephemeral_public_key = serialization.load_der_public_key(
-    ephemeral_public_key_bytes,
-    backend=default_backend()
+    ephemeral_public_key_bytes, backend=default_backend()
 )
 
 shared_key = private_key_2.exchange(ec.ECDH(), ephemeral_public_key)
@@ -55,8 +58,8 @@ hkdf = HKDF(
     algorithm=hashes.SHA256(),
     length=32,
     salt=None,
-    info=b'handshake data',
-    backend=backend
+    info=b"handshake data",
+    backend=backend,
 )
 key = hkdf.derive(shared_key)
 
