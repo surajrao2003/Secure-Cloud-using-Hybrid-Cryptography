@@ -1,8 +1,9 @@
 # Secure Cloud Using Hybrid Cryptography
 
+## Overview
+
 A user-friendly web application for secure file storage and retrieval using a hybrid cryptography model (AES + RSA). Protect your data with strong encryption before uploading to the cloud. AES ensures fast, secure file encryption, while RSA secures the AES keys for safe sharing and storage.
 
----
 
 ## Design & Implementation Plan
 
@@ -10,7 +11,6 @@ A user-friendly web application for secure file storage and retrieval using a hy
 
 *Figure: High-level design and implementation timeline for the hybrid cryptography cloud storage system.*
 
----
 
 ## Features
 - **Hybrid Encryption**: Combines AES (for file encryption) and RSA (for securing AES keys).
@@ -19,7 +19,6 @@ A user-friendly web application for secure file storage and retrieval using a hy
 - **Key Management**: AES keys are encrypted with RSA and provided to the user.
 - **Security Best Practices**: No sensitive credentials in code; uses environment variables.
 
----
 
 ## Flowchart of the Hybrid Cryptographic Model
 
@@ -27,7 +26,6 @@ A user-friendly web application for secure file storage and retrieval using a hy
 
 *Figure: Flowchart illustrating the design and implementation of the hybrid cryptography model using RSA and AES for secure file encryption and decryption.*
 
----
 
 ## How It Works
 1. **Login**: User logs in using credentials.
@@ -37,7 +35,6 @@ A user-friendly web application for secure file storage and retrieval using a hy
 5. **Recombine and Download Files**: Encrypted file and key are recombined for download.
 6. **User Authentication**: User authenticates to access and decrypt files.
 
----
 
 ## Setup Instructions
 
@@ -80,13 +77,11 @@ A user-friendly web application for secure file storage and retrieval using a hy
    python decrypt.py
    ```
 
----
 
 ## Usage
 - Use the web interface to select files for encryption or decryption.
 - Download the encrypted/decrypted files and keep your private key safe.
 
----
 
 ## Security Notes
 - **Never share your private RSA key.**
@@ -94,7 +89,6 @@ A user-friendly web application for secure file storage and retrieval using a hy
 - Cloudinary credentials must not be hardcoded; use environment variables.
 - For production, use HTTPS and secure key storage.
 
----
 
 ## Project Structure
 - `app.py`           - Main Flask app for uploads
@@ -105,11 +99,7 @@ A user-friendly web application for secure file storage and retrieval using a hy
 - `requirements.txt` - Python dependencies
 - `README.md`        - Project documentation
 
----
 
 ## Documentation
 - [Project Report](https://drive.google.com/file/d/1_TcTL2ojjeXs7WE53lcLIuncvuVWw6x3/view?usp=sharing)
-- [Project Presentation](https://docs.google.com/presentation/d/1eQvdTLpK-OuQh_ZA8J9xKFe1jcbIl8li/edit?usp=sharing)
-
----
-
+- [Project PPT](https://docs.google.com/presentation/d/1eQvdTLpK-OuQh_ZA8J9xKFe1jcbIl8li/edit?usp=sharing)
