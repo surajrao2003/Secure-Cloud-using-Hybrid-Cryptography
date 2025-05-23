@@ -6,7 +6,7 @@ A user-friendly web application for secure file storage and retrieval using a hy
 
 ## Design & Implementation Plan
 
-![Design Timeline](images/design_timeline.png)
+![Design Timeline](https://raw.githubusercontent.com/surajrao2003/Secure-Cloud-using-Hybrid-Cryptography/main/images/design_timeline.png)
 
 *Figure: High-level design and implementation timeline for the hybrid cryptography cloud storage system.*
 
@@ -23,7 +23,7 @@ A user-friendly web application for secure file storage and retrieval using a hy
 
 ## Flowchart of the Hybrid Cryptographic Model
 
-![Hybrid Cryptography Flowchart](images/hybrid_crypto_flowchart.png)
+![Hybrid Cryptography Flowchart](https://raw.githubusercontent.com/surajrao2003/Secure-Cloud-using-Hybrid-Cryptography/main/images/hybrid_crypto_flowchart.png)
 
 *Figure: Flowchart illustrating the design and implementation of the hybrid cryptography model using RSA and AES for secure file encryption and decryption.*
 
